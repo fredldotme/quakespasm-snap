@@ -18,7 +18,7 @@ if [ "$@" == "" ]; then
     
     # We actually need the parent directory
     GAMEFILES_PATH=$(dirname "${GAMEFILES_PATH}")
-    exec "desktop-launch" "$QUAKE_ENGINE" "-basedir" "$GAMEFILES_PATH"
+    exec "desktop-launch" "$SNAP/bin/$QUAKE_ENGINE" "-basedir" "$GAMEFILES_PATH"
 else
-    exec "desktop-launch" "$QUAKE_ENGINE" "$@"
+    exec "desktop-launch" "$SNAP/bin/$QUAKE_ENGINE" "$@"
 fi
