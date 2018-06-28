@@ -53,7 +53,7 @@ parts:
       cd Quake
       make USE_SDL2=1 -j4
       mkdir -p ${SNAPCRAFT_PART_INSTALL}/bin
-      install -m 755 quakespasm $SNAPCRAFT_PART_INSTALL}/bin/
+      install -m 755 quakespasm ${SNAPCRAFT_PART_INSTALL}/bin/
     build-packages:
       - make
       - build-essential
