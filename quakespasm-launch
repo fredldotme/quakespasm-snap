@@ -10,7 +10,7 @@ if [ -d "$SNAP/quake-engine" ]; then
 fi
 
 # if GAMEFILES_PATH is still empty use zenity dialog
-if [ "$@" == "" ]; then
+if [[ "$@" == "" ]]; then
     GAMEFILES_PATH=`zenity \
       --file-selection \
       --directory \
