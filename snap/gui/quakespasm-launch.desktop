@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Quakespasm
+Comment=An engine for iD software's Quake.
+Icon=${SNAP}/snap/gui/quake.png
+Exec=quakespasm.quakespasm-launch
+Categories=Game;ActionGame;
+Keywords=first;person;shooter;quake;
