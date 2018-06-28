@@ -45,8 +45,9 @@ slots:
 
 parts:
   quakespasm:
-    source: https://svn.code.sf.net/p/quakespasm/code/tags/quakespasm-0.93.1
-    source-type: svn
+    source: https://sourceforge.net/projects/quakespasm/files/Source/quakespasm-0.93.1.tgz/download
+    source-type: tar
+    source-checksum: sha1/aca08d7bea6085bc7b755fad1e83ef976b542c1e
     plugin: make
     override-build: |
       cd Quake
