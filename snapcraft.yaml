@@ -52,7 +52,8 @@ parts:
     override-build: |
       cd Quake
       make -j4
-      make install
+      mkdir -p ${SNAPCRAFT_PART_INSTALL}/bin
+      install -m 755 quakespasm $SNAPCRAFT_PART_INSTALL}/bin/
     build-packages:
       - make
       - build-essential
