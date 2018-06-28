@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Quakespasm
+Name=QuakeSpasm
 Comment=An engine for iD software's Quake.
 Icon=${SNAP}/snap/gui/quake.png
 Exec=quakespasm-beidl.quakespasm-launch
