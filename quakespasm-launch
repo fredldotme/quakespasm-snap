@@ -19,7 +19,7 @@ if [ "$@" == "" ]; then
     GAMEFILES_PATH=`zenity \
       --file-selection \
       --directory \
-      --title='Select the id1 directory containing Quake 2 game files (pak0.pak, pak1.pak ...)'`
+      --title='Select the id1 directory containing Quake game files (pak0.pak, pak1.pak ...)'`
     
     # We actually need the parent directory
     GAMEFILES_PATH=$(dirname "${GAMEFILES_PATH}")
