@@ -14,14 +14,8 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$SNAP/lib:$SNAP/usr/lib:$SNAP/lib/x86_6
 export LD_LIBRARY_PATH="$SNAP/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"
 export LD_LIBRARY_PATH=$SNAP_LIBRARY_PATH:$LD_LIBRARY_PATH
 
-GAMEFILES_PATH=""
-# if id1 exists in current directory use $PWD
-if [ -d "$PWD/id1" ]; then
-    GAMEFILES_PATH="$PWD"
-fi
-
 # if GAMEFILES_PATH is still empty use zenity dialog
-if [ "$GAMEFILES_PATH" == "" ]; then
+if [ "$@" == "" ]; then
     GAMEFILES_PATH=`zenity \
       --file-selection \
       --directory \
@@ -29,6 +23,7 @@ if [ "$GAMEFILES_PATH" == "" ]; then
     
     # We actually need the parent directory
     GAMEFILES_PATH=$(dirname "${GAMEFILES_PATH}")
+    exec "$QUAKE_ENGINE" "-basedir" "$GAMEFILES_PATH"
+else
+    exec "$QUAKE_ENGINE" "$@"
 fi
-
-exec "desktop-launch" "$QUAKE_ENGINE" "-basedir" "$GAMEFILES_PATH" "$@"
