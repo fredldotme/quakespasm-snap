@@ -51,7 +51,8 @@ parts:
     plugin: make
     override-build: |
       cd Quake
-      snapcraftctl build
+      make -j4
+      make install
     build-packages:
       - make
       - build-essential
