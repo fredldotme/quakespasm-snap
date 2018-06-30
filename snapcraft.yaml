@@ -52,9 +52,6 @@ parts:
     plugin: make
     make-parameters:
       - USE_SDL2=1
-    override-build: |
-      mkdir -p $SNAPCRAFT_PART_INSTALL/bin
-      snapcraftctl build
     artifacts:
       - quakespasm
       - quakespasm.pak
