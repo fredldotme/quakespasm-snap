@@ -10,21 +10,21 @@ description: |
   This release of Quakespasm utilizes the SDL2 framework.
   
   Note to snap packagers:
-   Additionally, other snaps can consume its content via a content interface plug. Consuming snaps could use following snapcraft.yaml snippet to add the interface.
+  Additionally, other snaps can consume its content via a content interface plug. Consuming snaps could use following snapcraft.yaml snippet to add the interface.
   
   plugs:
     quake-engine:
-    content: quake-engine
-    interface: content
-    target: $SNAP/quake-engine
-    default-provider: quakespasm-beidl:quake-engine
+      content: quake-engine
+      interface: content
+      target: $SNAP/quake-engine
+      default-provider: quakespasm-beidl:quake-engine
    
   Within the consuming snap the content would be exposed at "$SNAP/quake-engine", ie:
-     /snap/the-consuming-snap/current/quake-engine
-     /var/lib/snapd/snap/the-consuming-snap/current/quake-engine
+    /snap/the-consuming-snap/current/quake-engine
+    /var/lib/snapd/snap/the-consuming-snap/current/quake-engine
    
-   Under certain circumstances it could be necessary to manually connect the interface, ie:
-     snap connect the-consuming-snap:quake-engine quakespasm-beidl:quake-engine
+  Under certain circumstances it could be necessary to manually connect the interface, ie:
+    snap connect the-consuming-snap:quake-engine quakespasm-beidl:quake-engine
   
 confinement: strict
 
