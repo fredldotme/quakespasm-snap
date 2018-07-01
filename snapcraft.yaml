@@ -3,10 +3,13 @@ version: 0.93.1
 grade: stable
 summary: An engine for iD software's Quake.
 description: |
+  Note:
+  This package only provides the engine, you need a valid copy of the (proprietary) game data to launch the game.
+  
   QuakeSpasm is a modern, cross-platform Quake 1 engine based on FitzQuake.
   
   It includes support for 64 bit CPUs and custom music playback, a new sound driver, some graphical niceities, and numerous bug-fixes and other improvements.
-
+  
   This release of Quakespasm utilizes the SDL2 framework.
   
   Note to snap packagers:
